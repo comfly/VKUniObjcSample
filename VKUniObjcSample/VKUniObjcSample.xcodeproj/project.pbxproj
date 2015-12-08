@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F1B176D91C170DF700022523 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B176D81C170DF700022523 /* main.m */; };
+		F1B176DC1C170DF700022523 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B176DB1C170DF700022523 /* AppDelegate.m */; };
+		F1B176E21C170DF700022523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B176E01C170DF700022523 /* Main.storyboard */; };
+		F1B176E41C170DF700022523 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B176E31C170DF700022523 /* Assets.xcassets */; };
+		F1B176F21C170EB100022523 /* SamplesSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B176F11C170EB100022523 /* SamplesSelectionViewController.m */; };
+		F1B176F51C170ED000022523 /* SampleDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B176F41C170ED000022523 /* SampleDescriptor.m */; };
+		F1B176F81C17104A00022523 /* ObjCPPSamplesViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1B176F71C17104A00022523 /* ObjCPPSamplesViewController.mm */; };
+		F1B176FE1C17137600022523 /* OrganizationObjc.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1B176FD1C17137600022523 /* OrganizationObjc.mm */; };
+		F1B177011C17145600022523 /* PersonObjc.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1B176FF1C17145600022523 /* PersonObjc.mm */; };
+		F1B177051C17196B00022523 /* PersonCpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1B177031C17196B00022523 /* PersonCpp.cpp */; };
+		F1B177081C172A8F00022523 /* Wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1B177071C172A8F00022523 /* Wrapper.mm */; };
+		F1B1770E1C172F1A00022523 /* Utilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1B1770D1C172F1A00022523 /* Utilities.mm */; };
+		F1B177131C173CD300022523 /* FilterCounter.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1B177121C173CD300022523 /* FilterCounter.mm */; };
+		F1B177161C173CE400022523 /* FilterUser.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1B177141C173CE400022523 /* FilterUser.mm */; };
+		F1B177191C173DA200022523 /* FilterUserWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1B177181C173DA200022523 /* FilterUserWrapper.mm */; };
+		F1B1771C1C1749C600022523 /* PIMPLSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1771B1C1749C600022523 /* PIMPLSampleViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F1B176D41C170DF700022523 /* VKUniObjcSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKUniObjcSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1B176D81C170DF700022523 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F1B176DA1C170DF700022523 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F1B176DB1C170DF700022523 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F1B176E11C170DF700022523 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F1B176E31C170DF700022523 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1B176E81C170DF700022523 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1B176F01C170EB100022523 /* SamplesSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SamplesSelectionViewController.h; sourceTree = "<group>"; };
+		F1B176F11C170EB100022523 /* SamplesSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SamplesSelectionViewController.m; sourceTree = "<group>"; };
+		F1B176F31C170ED000022523 /* SampleDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleDescriptor.h; sourceTree = "<group>"; };
+		F1B176F41C170ED000022523 /* SampleDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleDescriptor.m; sourceTree = "<group>"; };
+		F1B176F61C17104A00022523 /* ObjCPPSamplesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCPPSamplesViewController.h; sourceTree = "<group>"; };
+		F1B176F71C17104A00022523 /* ObjCPPSamplesViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjCPPSamplesViewController.mm; sourceTree = "<group>"; };
+		F1B176FA1C17109600022523 /* SampleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleController.h; sourceTree = "<group>"; };
+		F1B176FB1C1711B800022523 /* SampleViewControllers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleViewControllers.h; sourceTree = "<group>"; };
+		F1B176FC1C17137600022523 /* OrganizationObjc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; path = OrganizationObjc.h; sourceTree = "<group>"; };
+		F1B176FD1C17137600022523 /* OrganizationObjc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OrganizationObjc.mm; sourceTree = "<group>"; };
+		F1B176FF1C17145600022523 /* PersonObjc.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PersonObjc.mm; sourceTree = "<group>"; };
+		F1B177001C17145600022523 /* PersonObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonObjc.h; sourceTree = "<group>"; };
+		F1B177021C17146E00022523 /* Gender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gender.h; sourceTree = "<group>"; };
+		F1B177031C17196B00022523 /* PersonCpp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = PersonCpp.cpp; sourceTree = "<group>"; };
+		F1B177041C17196B00022523 /* PersonCpp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PersonCpp.hpp; sourceTree = "<group>"; };
+		F1B177061C172A8F00022523 /* Wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wrapper.h; sourceTree = "<group>"; };
+		F1B177071C172A8F00022523 /* Wrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Wrapper.mm; sourceTree = "<group>"; };
+		F1B1770C1C172F1A00022523 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		F1B1770D1C172F1A00022523 /* Utilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Utilities.mm; sourceTree = "<group>"; };
+		F1B177111C173CD300022523 /* FilterCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterCounter.h; sourceTree = "<group>"; };
+		F1B177121C173CD300022523 /* FilterCounter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FilterCounter.mm; sourceTree = "<group>"; };
+		F1B177141C173CE400022523 /* FilterUser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FilterUser.mm; sourceTree = "<group>"; };
+		F1B177151C173CE400022523 /* FilterUser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FilterUser.hpp; sourceTree = "<group>"; };
+		F1B177171C173DA200022523 /* FilterUserWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterUserWrapper.h; sourceTree = "<group>"; };
+		F1B177181C173DA200022523 /* FilterUserWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FilterUserWrapper.mm; sourceTree = "<group>"; };
+		F1B1771A1C1749C600022523 /* VKUniObjcSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VKUniObjcSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		F1B1771B1C1749C600022523 /* PIMPLSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PIMPLSampleViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1B176D11C170DF700022523 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F1B176CB1C170DF700022523 = {
+			isa = PBXGroup;
+			children = (
+				F1B176D61C170DF700022523 /* VKUniObjcSample */,
+				F1B176D51C170DF700022523 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F1B176D51C170DF700022523 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1B176D41C170DF700022523 /* VKUniObjcSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1B176D61C170DF700022523 /* VKUniObjcSample */ = {
+			isa = PBXGroup;
+			children = (
+				F1B176EE1C170E8100022523 /* Classes */,
+				F1B176DA1C170DF700022523 /* AppDelegate.h */,
+				F1B176DB1C170DF700022523 /* AppDelegate.m */,
+				F1B176E01C170DF700022523 /* Main.storyboard */,
+				F1B176E31C170DF700022523 /* Assets.xcassets */,
+				F1B176E81C170DF700022523 /* Info.plist */,
+				F1B1771A1C1749C600022523 /* VKUniObjcSample-Bridging-Header.h */,
+				F1B176D71C170DF700022523 /* Supporting Files */,
+			);
+			path = VKUniObjcSample;
+			sourceTree = "<group>";
+		};
+		F1B176D71C170DF700022523 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1B176D81C170DF700022523 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F1B176EE1C170E8100022523 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F1B176EF1C170E8700022523 /* ObjC++ Samples */,
+				F1B176FA1C17109600022523 /* SampleController.h */,
+				F1B176FB1C1711B800022523 /* SampleViewControllers.h */,
+				F1B176F01C170EB100022523 /* SamplesSelectionViewController.h */,
+				F1B176F11C170EB100022523 /* SamplesSelectionViewController.m */,
+				F1B176F31C170ED000022523 /* SampleDescriptor.h */,
+				F1B176F41C170ED000022523 /* SampleDescriptor.m */,
+				F1B1770C1C172F1A00022523 /* Utilities.h */,
+				F1B1770D1C172F1A00022523 /* Utilities.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		F1B176EF1C170E8700022523 /* ObjC++ Samples */ = {
+			isa = PBXGroup;
+			children = (
+				F1B1770F1C173B4200022523 /* Straight sample */,
+				F1B177101C173BB300022523 /* PIMPL */,
+				F1B177061C172A8F00022523 /* Wrapper.h */,
+				F1B177071C172A8F00022523 /* Wrapper.mm */,
+			);
+			name = "ObjC++ Samples";
+			sourceTree = "<group>";
+		};
+		F1B176F91C17105200022523 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1B176F61C17104A00022523 /* ObjCPPSamplesViewController.h */,
+				F1B176F71C17104A00022523 /* ObjCPPSamplesViewController.mm */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F1B1770F1C173B4200022523 /* Straight sample */ = {
+			isa = PBXGroup;
+			children = (
+				F1B176F91C17105200022523 /* Controller */,
+				F1B176FC1C17137600022523 /* OrganizationObjc.h */,
+				F1B176FD1C17137600022523 /* OrganizationObjc.mm */,
+				F1B177001C17145600022523 /* PersonObjc.h */,
+				F1B176FF1C17145600022523 /* PersonObjc.mm */,
+				F1B177041C17196B00022523 /* PersonCpp.hpp */,
+				F1B177031C17196B00022523 /* PersonCpp.cpp */,
+				F1B177021C17146E00022523 /* Gender.h */,
+			);
+			name = "Straight sample";
+			sourceTree = "<group>";
+		};
+		F1B177101C173BB300022523 /* PIMPL */ = {
+			isa = PBXGroup;
+			children = (
+				F1B177111C173CD300022523 /* FilterCounter.h */,
+				F1B177121C173CD300022523 /* FilterCounter.mm */,
+				F1B177151C173CE400022523 /* FilterUser.hpp */,
+				F1B177141C173CE400022523 /* FilterUser.mm */,
+				F1B177171C173DA200022523 /* FilterUserWrapper.h */,
+				F1B177181C173DA200022523 /* FilterUserWrapper.mm */,
+				F1B1771B1C1749C600022523 /* PIMPLSampleViewController.swift */,
+			);
+			name = PIMPL;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1B176D31C170DF700022523 /* VKUniObjcSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1B176EB1C170DF700022523 /* Build configuration list for PBXNativeTarget "VKUniObjcSample" */;
+			buildPhases = (
+				F1B176D01C170DF700022523 /* Sources */,
+				F1B176D11C170DF700022523 /* Frameworks */,
+				F1B176D21C170DF700022523 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VKUniObjcSample;
+			productName = VKUniObjcSample;
+			productReference = F1B176D41C170DF700022523 /* VKUniObjcSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1B176CC1C170DF700022523 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = VKontakte;
+				TargetAttributes = {
+					F1B176D31C170DF700022523 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = F1B176CF1C170DF700022523 /* Build configuration list for PBXProject "VKUniObjcSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F1B176CB1C170DF700022523;
+			productRefGroup = F1B176D51C170DF700022523 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1B176D31C170DF700022523 /* VKUniObjcSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1B176D21C170DF700022523 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1B176E41C170DF700022523 /* Assets.xcassets in Resources */,
+				F1B176E21C170DF700022523 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1B176D01C170DF700022523 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1B177051C17196B00022523 /* PersonCpp.cpp in Sources */,
+				F1B177011C17145600022523 /* PersonObjc.mm in Sources */,
+				F1B177191C173DA200022523 /* FilterUserWrapper.mm in Sources */,
+				F1B177081C172A8F00022523 /* Wrapper.mm in Sources */,
+				F1B176FE1C17137600022523 /* OrganizationObjc.mm in Sources */,
+				F1B1770E1C172F1A00022523 /* Utilities.mm in Sources */,
+				F1B176DC1C170DF700022523 /* AppDelegate.m in Sources */,
+				F1B1771C1C1749C600022523 /* PIMPLSampleViewController.swift in Sources */,
+				F1B177161C173CE400022523 /* FilterUser.mm in Sources */,
+				F1B177131C173CD300022523 /* FilterCounter.mm in Sources */,
+				F1B176D91C170DF700022523 /* main.m in Sources */,
+				F1B176F51C170ED000022523 /* SampleDescriptor.m in Sources */,
+				F1B176F81C17104A00022523 /* ObjCPPSamplesViewController.mm in Sources */,
+				F1B176F21C170EB100022523 /* SamplesSelectionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F1B176E01C170DF700022523 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1B176E11C170DF700022523 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F1B176E91C170DF700022523 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F1B176EA1C170DF700022523 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1B176EC1C170DF700022523 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = VKUniObjcSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vkontakte.VKUniObjcSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VKUniObjcSample/VKUniObjcSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F1B176ED1C170DF700022523 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = VKUniObjcSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vkontakte.VKUniObjcSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VKUniObjcSample/VKUniObjcSample-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1B176CF1C170DF700022523 /* Build configuration list for PBXProject "VKUniObjcSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1B176E91C170DF700022523 /* Debug */,
+				F1B176EA1C170DF700022523 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1B176EB1C170DF700022523 /* Build configuration list for PBXNativeTarget "VKUniObjcSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1B176EC1C170DF700022523 /* Debug */,
+				F1B176ED1C170DF700022523 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1B176CC1C170DF700022523 /* Project object */;
+}

@@ -15,7 +15,7 @@
 @interface FilterCounter ()
 
 @property (nonatomic, readonly) NSUInteger numbersCount;
-@property (nonatomic) std::list<NSUInteger> *numbers;
+@property (nonatomic, readonly) std::list<NSUInteger> numbers;
 
 @end
 
@@ -25,7 +25,6 @@
     self = [super init];
     if (self) {
         _numbersCount = numbersCount;
-        _numbers = new std::list<NSUInteger>();
     }
     
     return self;
@@ -33,12 +32,14 @@
 
 - (void)generate {
     for (auto i = 0; i < self.numbersCount; ++i) {
-        self.numbers->push_back(NextRandom(10000000) + 1000);
+        // FIXME
+        self.numbers.push_back(NextRandom(10000000) + 1000);
     }
+//    NSLog(@"Size of numbers: %zd", self.numbers.size());
 }
 
 - (NSUInteger)countWithPredicate:(BOOL(^)(int))predicate {
-    return std::count_if(self.numbers->cbegin(), self.numbers->cend(), predicate);
+    return std::count_if(self.numbers.cbegin(), self.numbers.cend(), predicate);
 }
 
 @end

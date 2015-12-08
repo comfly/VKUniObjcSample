@@ -8,10 +8,12 @@
 
 #import "FilterUserWrapper.h"
 #import "FilterUser.hpp"
+#import <memory>
+
 
 @interface FilterUserWrapper ()
 
-@property (nonatomic, readonly) FilterUser *filterUser;
+@property (nonatomic, readonly) std::shared_ptr<FilterUser> filterUser;
 
 @end
 
@@ -20,7 +22,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _filterUser = new FilterUser();
+        _filterUser = std::make_shared<FilterUser>();
     }
     
     return self;

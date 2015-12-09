@@ -18,7 +18,7 @@
         result->_name = [name copy];
         result->_salary = salary;
         result->_lastIncomes = [lastIncomes copy];
-        result->_maxValueOfLastIncomes = @{ @"max_income_value" : [lastIncomes valueForKeyPath:@"@max.self"] };
+        result->_maxValueOfLastIncomes = lastIncomes ? @{ @"max_income_value" : [lastIncomes valueForKeyPath:@"@max.self"] } : @{ };
     }
     
     return result;

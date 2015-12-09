@@ -24,6 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = [[ObjCCollectionsDataSource alloc] init];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Drop Weak"
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self
+                                                                             action:@selector(testWeakControl)];
 }
 
 + (id<SampleDescriptor>)descriptor {
@@ -46,6 +51,11 @@
     cell.detailTextLabel.text = item.details;
     
     return cell;
+}
+
+- (void)testWeakControl {
+    NSUInteger sectionToReload = [self.dataSource testWeakControl];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:sectionToReload] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 @end

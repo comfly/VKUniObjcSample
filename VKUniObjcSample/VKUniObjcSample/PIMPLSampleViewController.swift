@@ -25,19 +25,13 @@ public class PIMPLSampleViewController: UIViewController, SampleController {
         activityIndicator.hidden = false;
         activityIndicator.startAnimating()
         
-        let completionBlock: Int32 -> Void = { [weak self] in
-            guard let sself = self else { return }
-            
-            sself.resultLabel.text = "Result: \($0)"
-            sself.activityIndicator.stopAnimating()
+        func completionBlock(result: Int32) {
+            resultLabel.text = "Result: \(result)"
+            activityIndicator.stopAnimating()
         }
         
         filter.generateWithCompletionBlock {
-            filter.countWithPredicate(curry(<)(100000), completionBlock: completionBlock)
+            filter.countWithPredicate({ $0 < 500 }, completionBlock: completionBlock)
         }
     }
-}
-
-private func curry<A, B, R>(f: (A, B) -> R) -> A -> B -> R {
-    return {a in {b in f(a, b) }}
 }

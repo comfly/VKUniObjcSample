@@ -11,7 +11,3 @@
 NSString *StringifyDate(NSDate *date) {
     return [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
 }
-
-NSUInteger NextRandom(NSUInteger max) {
-    return arc4random_uniform(max);
-}

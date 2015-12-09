@@ -9,7 +9,9 @@
 #import "SamplesSelectionViewController.h"
 #import "SampleDescriptor.h"
 #import "SampleViewControllers.h"
+#import "ObjCCollectionsViewController.h"
 #import "VKUniObjcSample-Swift.h"
+
 
 @interface SamplesSelectionViewController ()
 
@@ -24,7 +26,8 @@
     
     self.samples = @[
         [ObjCPPSamplesViewController descriptor],
-        [PIMPLSampleViewController descriptor]
+        [PIMPLSampleViewController descriptor],
+        [ObjCCollectionsViewController descriptor],
     ];
 }
 

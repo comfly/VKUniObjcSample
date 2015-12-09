@@ -46,9 +46,9 @@
     
     PersonObjc *child1 = [PersonObjc personWithName:@"Child 1"
                                                 DOB:randomDate()
-                                              hobby:"Code strange things " + std::to_string(NextRandom(10))];
+                                              hobby:"Code strange things"];
     
-    PersonObjc *child2 = [PersonObjc personWithName:@"Child 2" DOB:randomDate() hobby:"Biking" + std::to_string(NextRandom(10))];
+    PersonObjc *child2 = [PersonObjc personWithName:@"Child 2" DOB:randomDate() hobby:"Biking"];
 
     auto person = new ObjCPPSamples::PersonCpp(
             @"Student 1",

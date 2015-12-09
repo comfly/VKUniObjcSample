@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1271F161C184C3B009423EA /* ObjCCollectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F151C184C3B009423EA /* ObjCCollectionsViewController.m */; };
+		F1271F191C184D5B009423EA /* ObjCCollectionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F181C184D5B009423EA /* ObjCCollectionsDataSource.m */; };
+		F1271F1E1C185148009423EA /* CollectionOperationsSample.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F1D1C185148009423EA /* CollectionOperationsSample.m */; };
+		F1271F211C18551A009423EA /* CollectionsSampleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F201C18551A009423EA /* CollectionsSampleItem.m */; };
+		F1271F241C1860A9009423EA /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F231C1860A9009423EA /* Person.m */; };
 		F1B176D91C170DF700022523 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B176D81C170DF700022523 /* main.m */; };
 		F1B176DC1C170DF700022523 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B176DB1C170DF700022523 /* AppDelegate.m */; };
 		F1B176E21C170DF700022523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B176E01C170DF700022523 /* Main.storyboard */; };
@@ -26,6 +31,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1271F141C184C3B009423EA /* ObjCCollectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCCollectionsViewController.h; sourceTree = "<group>"; };
+		F1271F151C184C3B009423EA /* ObjCCollectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCCollectionsViewController.m; sourceTree = "<group>"; };
+		F1271F171C184D5B009423EA /* ObjCCollectionsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCCollectionsDataSource.h; sourceTree = "<group>"; };
+		F1271F181C184D5B009423EA /* ObjCCollectionsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCCollectionsDataSource.m; sourceTree = "<group>"; };
+		F1271F1B1C18504C009423EA /* GenericCollectionsDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenericCollectionsDataSource.h; sourceTree = "<group>"; };
+		F1271F1C1C185148009423EA /* CollectionOperationsSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionOperationsSample.h; sourceTree = "<group>"; };
+		F1271F1D1C185148009423EA /* CollectionOperationsSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionOperationsSample.m; sourceTree = "<group>"; };
+		F1271F1F1C18551A009423EA /* CollectionsSampleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionsSampleItem.h; sourceTree = "<group>"; };
+		F1271F201C18551A009423EA /* CollectionsSampleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionsSampleItem.m; sourceTree = "<group>"; };
+		F1271F221C1860A9009423EA /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		F1271F231C1860A9009423EA /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		F1B176D41C170DF700022523 /* VKUniObjcSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKUniObjcSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B176D81C170DF700022523 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1B176DA1C170DF700022523 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +89,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1271F131C184BF8009423EA /* Collections Samples */ = {
+			isa = PBXGroup;
+			children = (
+				F1271F1A1C185024009423EA /* Samples */,
+				F1271F141C184C3B009423EA /* ObjCCollectionsViewController.h */,
+				F1271F151C184C3B009423EA /* ObjCCollectionsViewController.m */,
+				F1271F171C184D5B009423EA /* ObjCCollectionsDataSource.h */,
+				F1271F181C184D5B009423EA /* ObjCCollectionsDataSource.m */,
+				F1271F1B1C18504C009423EA /* GenericCollectionsDataSource.h */,
+				F1271F1F1C18551A009423EA /* CollectionsSampleItem.h */,
+				F1271F201C18551A009423EA /* CollectionsSampleItem.m */,
+			);
+			name = "Collections Samples";
+			sourceTree = "<group>";
+		};
+		F1271F1A1C185024009423EA /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				F1271F1C1C185148009423EA /* CollectionOperationsSample.h */,
+				F1271F1D1C185148009423EA /* CollectionOperationsSample.m */,
+				F1271F221C1860A9009423EA /* Person.h */,
+				F1271F231C1860A9009423EA /* Person.m */,
+			);
+			name = Samples;
+			sourceTree = "<group>";
+		};
 		F1B176CB1C170DF700022523 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				F1B176EF1C170E8700022523 /* ObjC++ Samples */,
+				F1271F131C184BF8009423EA /* Collections Samples */,
 				F1B176FA1C17109600022523 /* SampleController.h */,
 				F1B176FB1C1711B800022523 /* SampleViewControllers.h */,
 				F1B176F01C170EB100022523 /* SamplesSelectionViewController.h */,
@@ -246,11 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1271F161C184C3B009423EA /* ObjCCollectionsViewController.m in Sources */,
 				F1B177051C17196B00022523 /* PersonCpp.cpp in Sources */,
+				F1271F241C1860A9009423EA /* Person.m in Sources */,
 				F1B177011C17145600022523 /* PersonObjc.mm in Sources */,
 				F1B177191C173DA200022523 /* FilterUserWrapper.mm in Sources */,
 				F1B177081C172A8F00022523 /* Wrapper.mm in Sources */,
 				F1B176FE1C17137600022523 /* OrganizationObjc.mm in Sources */,
+				F1271F1E1C185148009423EA /* CollectionOperationsSample.m in Sources */,
 				F1B1770E1C172F1A00022523 /* Utilities.mm in Sources */,
 				F1B176DC1C170DF700022523 /* AppDelegate.m in Sources */,
 				F1B1771C1C1749C600022523 /* PIMPLSampleViewController.swift in Sources */,
@@ -258,7 +304,9 @@
 				F1B177131C173CD300022523 /* FilterCounter.mm in Sources */,
 				F1B176D91C170DF700022523 /* main.m in Sources */,
 				F1B176F51C170ED000022523 /* SampleDescriptor.m in Sources */,
+				F1271F211C18551A009423EA /* CollectionsSampleItem.m in Sources */,
 				F1B176F81C17104A00022523 /* ObjCPPSamplesViewController.mm in Sources */,
+				F1271F191C184D5B009423EA /* ObjCCollectionsDataSource.m in Sources */,
 				F1B176F21C170EB100022523 /* SamplesSelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +453,7 @@
 				F1B176ED1C170DF700022523 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

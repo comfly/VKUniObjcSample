@@ -10,4 +10,3 @@
 #define CHECK_MEMORY (1)
 
 extern NSString *StringifyDate(NSDate *);
-extern NSUInteger NextRandom(NSUInteger max);

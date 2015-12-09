@@ -13,6 +13,8 @@
 		F1271F211C18551A009423EA /* CollectionsSampleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F201C18551A009423EA /* CollectionsSampleItem.m */; };
 		F1271F241C1860A9009423EA /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F231C1860A9009423EA /* Person.m */; };
 		F1271F341C18999A009423EA /* WeakCollectionsSample.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F331C18999A009423EA /* WeakCollectionsSample.m */; };
+		F1271F371C189FCB009423EA /* CFCollectionsSample.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F361C189FCB009423EA /* CFCollectionsSample.m */; };
+		F1271F3A1C18AA22009423EA /* PriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F391C18AA22009423EA /* PriorityQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F1B176D91C170DF700022523 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B176D81C170DF700022523 /* main.m */; };
 		F1B176DC1C170DF700022523 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B176DB1C170DF700022523 /* AppDelegate.m */; };
 		F1B176E21C170DF700022523 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B176E01C170DF700022523 /* Main.storyboard */; };
@@ -45,6 +47,10 @@
 		F1271F231C1860A9009423EA /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		F1271F321C18999A009423EA /* WeakCollectionsSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakCollectionsSample.h; sourceTree = "<group>"; };
 		F1271F331C18999A009423EA /* WeakCollectionsSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakCollectionsSample.m; sourceTree = "<group>"; };
+		F1271F351C189FCB009423EA /* CFCollectionsSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFCollectionsSample.h; sourceTree = "<group>"; };
+		F1271F361C189FCB009423EA /* CFCollectionsSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFCollectionsSample.m; sourceTree = "<group>"; };
+		F1271F381C18AA22009423EA /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
+		F1271F391C18AA22009423EA /* PriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriorityQueue.m; sourceTree = "<group>"; };
 		F1B176D41C170DF700022523 /* VKUniObjcSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKUniObjcSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B176D81C170DF700022523 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1B176DA1C170DF700022523 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,8 +120,12 @@
 				F1271F1D1C185148009423EA /* CollectionOperationsSample.m */,
 				F1271F321C18999A009423EA /* WeakCollectionsSample.h */,
 				F1271F331C18999A009423EA /* WeakCollectionsSample.m */,
+				F1271F351C189FCB009423EA /* CFCollectionsSample.h */,
+				F1271F361C189FCB009423EA /* CFCollectionsSample.m */,
 				F1271F221C1860A9009423EA /* Person.h */,
 				F1271F231C1860A9009423EA /* Person.m */,
+				F1271F381C18AA22009423EA /* PriorityQueue.h */,
+				F1271F391C18AA22009423EA /* PriorityQueue.m */,
 			);
 			name = Samples;
 			sourceTree = "<group>";
@@ -233,8 +243,8 @@
 			buildConfigurationList = F1B176EB1C170DF700022523 /* Build configuration list for PBXNativeTarget "VKUniObjcSample" */;
 			buildPhases = (
 				F1B176D01C170DF700022523 /* Sources */,
-				F1B176D11C170DF700022523 /* Frameworks */,
 				F1B176D21C170DF700022523 /* Resources */,
+				F1B176D11C170DF700022523 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,6 +307,7 @@
 				F1271F161C184C3B009423EA /* ObjCCollectionsViewController.m in Sources */,
 				F1B177051C17196B00022523 /* PersonCpp.cpp in Sources */,
 				F1271F241C1860A9009423EA /* Person.m in Sources */,
+				F1271F3A1C18AA22009423EA /* PriorityQueue.m in Sources */,
 				F1271F341C18999A009423EA /* WeakCollectionsSample.m in Sources */,
 				F1B177011C17145600022523 /* PersonObjc.mm in Sources */,
 				F1B177191C173DA200022523 /* FilterUserWrapper.mm in Sources */,
@@ -304,6 +315,7 @@
 				F1B176FE1C17137600022523 /* OrganizationObjc.mm in Sources */,
 				F1271F1E1C185148009423EA /* CollectionOperationsSample.m in Sources */,
 				F1B1770E1C172F1A00022523 /* Utilities.mm in Sources */,
+				F1271F371C189FCB009423EA /* CFCollectionsSample.m in Sources */,
 				F1B176DC1C170DF700022523 /* AppDelegate.m in Sources */,
 				F1B1771C1C1749C600022523 /* PIMPLSampleViewController.swift in Sources */,
 				F1B177161C173CE400022523 /* FilterUser.mm in Sources */,

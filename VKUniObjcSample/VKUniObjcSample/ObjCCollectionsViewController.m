@@ -25,10 +25,20 @@
     [super viewDidLoad];
     self.dataSource = [[ObjCCollectionsDataSource alloc] init];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Drop Weak"
-                                                                              style:UIBarButtonItemStylePlain
-                                                                             target:self
-                                                                             action:@selector(testWeakControl)];
+    [self.navigationController setToolbarHidden:NO animated:NO];
+    
+    [self setToolbarItems:@[
+            [[UIBarButtonItem alloc] initWithTitle:@"Drop Weak"
+                                             style:UIBarButtonItemStylePlain
+                                            target:self
+                                            action:@selector(testWeakControl)],
+            [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                                          target:nil
+                                                          action:nil],
+            [[UIBarButtonItem alloc] initWithTitle:@"Next min" style:UIBarButtonItemStylePlain
+                                            target:self
+                                            action:@selector(nextMin)]
+    ] animated:NO];
 }
 
 + (id<SampleDescriptor>)descriptor {
@@ -54,8 +64,12 @@
 }
 
 - (void)testWeakControl {
-    NSUInteger sectionToReload = [self.dataSource testWeakControl];
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:sectionToReload] withRowAnimation:UITableViewRowAnimationAutomatic];
+    NSIndexSet *sectionsToReload = [self.dataSource testWeakControl];
+    [self.tableView reloadSections:sectionsToReload withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void)nextMin {
+    
 }
 
 @end

@@ -17,6 +17,6 @@
 - (CollectionsSampleItem *)objectForKeyedSubscript:(NSIndexPath *)indexPath;
 - (NSUInteger)numberOfRowsInSection:(NSUInteger)section;
 
-- (NSUInteger)testWeakControl;
+- (NSIndexSet *)testWeakControl;
 
 @end

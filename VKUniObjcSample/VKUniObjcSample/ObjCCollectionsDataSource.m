@@ -11,6 +11,7 @@
 #import "GenericCollectionsDataSource.h"
 #import "CollectionOperationsSample.h"
 #import "WeakCollectionsSample.h"
+#import "CFCollectionsSample.h"
 
 
 @interface ObjCCollectionsDataSource ()
@@ -35,6 +36,7 @@ typedef NS_ENUM(NSUInteger, ObjCCollectionsSections) {
         _samples = @[
             [[CollectionOperationsSample alloc] init],
             [[WeakCollectionsSample alloc] init],
+            [[CFCollectionsSample alloc] init]
         ];
     }
     
@@ -53,9 +55,13 @@ typedef NS_ENUM(NSUInteger, ObjCCollectionsSections) {
     return self.samples.count;
 }
 
-- (NSUInteger)testWeakControl {
+- (NSIndexSet *)testWeakControl {
     [(WeakCollectionsSample *)self.samples[ObjCCollectionsWeakSection] nullifyFirstItem];
-    return ObjCCollectionsWeakSection;
+    [(CFCollectionsSample *)self.samples[ObjCCollectionsCoreFoundationSection] nullifyFirstItem];
+    
+    NSMutableIndexSet *result = [NSMutableIndexSet indexSetWithIndex:ObjCCollectionsWeakSection];
+    [result addIndex:ObjCCollectionsCoreFoundationSection];
+    return [result copy];
 }
 
 @end

@@ -12,6 +12,6 @@
 
 @interface CFCollectionsSample : NSObject <GenericCollectionsDataSource>
 
-- (void)nullifyFirstItem;
+- (BOOL)grabNextMin;
 
 @end

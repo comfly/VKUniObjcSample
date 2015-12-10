@@ -10,6 +10,7 @@
 
 
 @class CollectionsSampleItem;
+@class Person;
 
 @interface ObjCCollectionsDataSource : NSObject
 
@@ -18,5 +19,7 @@
 - (NSUInteger)numberOfRowsInSection:(NSUInteger)section;
 
 - (NSIndexSet *)testWeakControl;
+
+- (BOOL)grabNextMin;
 
 @end

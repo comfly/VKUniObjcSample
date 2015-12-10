@@ -10,6 +10,10 @@
 
 @implementation Person
 
++ (instancetype)personWithName:(NSString *)name salary:(NSUInteger)salary {
+    return [self personWithName:name salary:salary lastIncomes:nil];
+}
+
 + (instancetype)personWithName:(NSString *)name
                         salary:(NSUInteger)salary
                    lastIncomes:(NSArray<NSNumber *> *)lastIncomes {
@@ -25,3 +29,28 @@
 }
 
 @end
+
+NSArray<NSString *> *GenerateNames() {
+    return @[
+            @"Homer",
+            @"Marge",
+            @"Bart",
+            @"Lisa",
+            @"Maggie",
+
+            @"Phillip",
+            @"Turanga",
+            @"Bender",
+            @"Amy",
+            @"Hermes",
+            @"Hubert",
+            @"John",
+
+            @"Peter",
+            @"Lois",
+            @"Meg",
+            @"Chris",
+            @"Stewie",
+            @"Brian"
+    ];
+}

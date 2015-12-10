@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface Person : NSObject
 
 @property (nonatomic, readonly) NSString *name;
@@ -15,8 +16,12 @@
 @property (nonatomic, readonly) NSArray<NSNumber *> *lastIncomes;
 @property (nonatomic, readonly) NSDictionary<NSString *, NSNumber *> *maxValueOfLastIncomes;
 
++ (instancetype)personWithName:(NSString *)name salary:(NSUInteger)salary;
+
 + (instancetype)personWithName:(NSString *)name
                         salary:(NSUInteger)salary
                   lastIncomes:(NSArray<NSNumber *> *)lastIncomes;
 
 @end
+
+extern NSArray<NSString *> *GenerateNames();

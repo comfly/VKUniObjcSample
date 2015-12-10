@@ -8,14 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PriorityQueue<__covariant ObjectType: __kindof id<NSObject>> : NSObject
+@protocol PriorityComparable <NSObject>
+
+- (NSComparisonResult)compareByPriority:(id<PriorityComparable>)other;
+
+@end
+
+@interface PriorityQueue<__covariant ObjectType: __kindof id<PriorityComparable>> : NSObject
 
 @property (nonatomic, readonly) NSUInteger count;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)new NS_UNAVAILABLE;
 
-- (instancetype)initWithArray:(NSArray<ObjectType> *)array;
+- (instancetype)initWithArray:(NSArray<ObjectType> *)array capacity:(NSUInteger)capacity;
 
 - (ObjectType)nextMin;
 

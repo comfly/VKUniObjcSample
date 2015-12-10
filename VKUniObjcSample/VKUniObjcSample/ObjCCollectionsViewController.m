@@ -69,7 +69,10 @@
 }
 
 - (void)nextMin {
-    
+    if ([self.dataSource grabNextMin]) {
+        NSUInteger numberOfRows = [self.dataSource numberOfRowsInSection:2];
+        [self.tableView insertRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:numberOfRows - 1 inSection:2] ] withRowAnimation:UITableViewRowAnimationTop];
+    }
 }
 
 @end

@@ -39,29 +39,8 @@
 }
 
 - (NSString *)generateRandomName {
-    NSArray *const kNames = @[
-           @"Homer",
-           @"Marge",
-           @"Bart",
-           @"Lisa",
-           @"Maggie",
-           
-           @"Phillip",
-           @"Turanga",
-           @"Bender",
-           @"Amy",
-           @"Hermes",
-           @"Hubert",
-           @"John",
-           
-           @"Peter",
-           @"Lois",
-           @"Meg",
-           @"Chris",
-           @"Stewie",
-           @"Brian"
-    ];
-    return kNames[arc4random_uniform(kNames.count)];
+    NSArray<NSString *> *names = GenerateNames();
+    return names[arc4random_uniform(names.count)];
 }
 
 - (NSArray<Person *> *)generateRandomPeople {

@@ -9,6 +9,7 @@
 #import "WeakCollectionsSample.h"
 #import "CollectionsSampleItem.h"
 #import "Person.h"
+#import "Person+Presentation.h"
 
 
 @interface WeakCollectionsSample ()
@@ -39,17 +40,13 @@
 
 - (CollectionsSampleItem *)objectAtIndexedSubscript:(NSUInteger)index {
     Person *person = [self.items pointerAtIndex:index];
-    return [CollectionsSampleItem sampleItemWithTitle:person.name details:[self formatSalaryOfPerson:person]];
-}
-
-- (NSString *)formatSalaryOfPerson:(Person *)person {
-    return [NSNumberFormatter localizedStringFromNumber:@(person.salary) numberStyle:NSNumberFormatterCurrencyStyle];
+    return [CollectionsSampleItem sampleItemWithTitle:person.name details:person.salaryString];
 }
 
 - (NSArray<Person *> *)generateRandomPeople {
     return @[
-        [Person personWithName:@"John" salary:100000 lastIncomes:nil],
-        [Person personWithName:@"Mary" salary:110000 lastIncomes:nil]
+        [Person personWithName:@"John" salary:100000],
+        [Person personWithName:@"Mary" salary:110000]
     ];
 }
 

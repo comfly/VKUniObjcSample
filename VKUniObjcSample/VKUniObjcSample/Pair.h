@@ -20,5 +20,7 @@ extern Pair second(Pair, Transform);
 // Applies Pair to a 2-ary function, CAR is applied as the first arg, CDR - as the second.
 extern id apply(Pair, TwoAryFunction);
 
+extern Pair flip(Pair);
+
 extern Pair (^const null)();
 extern BOOL isnull(Pair p);

@@ -4,6 +4,8 @@
 //
 
 #import "List.h"
+#import "BlockExtensions.h"
+
 
 static NSArray *extractArguments(id first, va_list list) {
     if (!first) {
@@ -67,13 +69,17 @@ id fold(List list, id seed, TwoAryFunction f) {
 
 unsigned count(List list) {
     NSCParameterAssert(list);
+    
     // Implement yourself.
+    
     return 0;
 }
 
-List map(List list, Transform f) {
+List (^const map)(List, Transform) = ^(List list, Transform f) {
     NSCParameterAssert(list);
     NSCParameterAssert(f);
-    // Implement yourself.
-    return null();
-}
+    
+    // Can you do it using flip, curry, compose?
+    
+    return list;
+};

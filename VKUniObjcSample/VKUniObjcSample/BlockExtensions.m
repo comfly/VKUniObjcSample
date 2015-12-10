@@ -22,8 +22,27 @@ static NSArray *mapOver_impl(id self, SEL _cmd, id<NSFastEnumeration> items) {
     return [result copy];
 }
 
+static Transform curry_impl(id self, SEL _cmd) {
+    TwoAryFunction this = self;
+    return (Transform)^Transform(id a) {
+        return ^id(id b) {
+            return this(a, b);
+        };
+    };
+}
+
+static TwoAryFunction flip_impl(id self, SEL _cmd) {
+    TwoAryFunction this = self;
+    return ^(id a, id b) {
+        return this(b, a);
+    };
+}
+
+
 - (Transform)compose:(Transform)block { return nil; }
 - (NSArray *)mapOver:(id<NSFastEnumeration>)items { return nil; }
+- (Transform)curry { return nil; }
+- (TwoAryFunction)flip { return nil; }
 
 + (void)load {
     Class class = NSClassFromString(@"NSBlock");
@@ -33,6 +52,12 @@ static NSArray *mapOver_impl(id self, SEL _cmd, id<NSFastEnumeration> items) {
     }
     if (!class_addMethod(class, @selector(mapOver:), (IMP)mapOver_impl, "@@:@")) {
         NSLog(@"Block method \'mapOver:\' is not registered");
+    }
+    if (!class_addMethod(class, @selector(curry), (IMP)curry_impl, "@@:")) {
+        NSLog(@"Block method \'curry\' is not registered");
+    }
+    if (!class_addMethod(class, @selector(flip), (IMP)flip_impl, "@@:")) {
+        NSLog(@"Block method \'flip\' is not registered");
     }
 }
 

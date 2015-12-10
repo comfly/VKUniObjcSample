@@ -5,6 +5,8 @@
 
 #import "Pair.h"
 #import "CommonTypes.h"
+#import "BlockExtensions.h"
+
 
 static NSObject *(^UnitMarker)(void) = ^{
     static NSObject *marker = nil;
@@ -69,4 +71,8 @@ id apply(Pair p, TwoAryFunction f) {
     return nil;
 }
 
-
+Pair flip(Pair p) {
+    NSCParameterAssert(pair);
+    // Implement yourself.
+    return null();
+}

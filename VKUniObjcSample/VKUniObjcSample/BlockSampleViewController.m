@@ -21,18 +21,21 @@
     return [SampleDescriptor descriptorWithTitle:@"Blocks sample" storyboardID:NSStringFromClass(self)];
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     Transform f = [[^(NSString *s) {
         return [@"Line " stringByAppendingString:s];
-    }  compose:^(NSNumber *n) {
+    }  $ ^(NSNumber *n) {
         return [n descriptionWithLocale:nil];
-    }] compose:^(NSNumber *n) {
+    }] $ ^(NSNumber *n) {
         return @(n.unsignedIntValue * 10);
     }];
 
-    self.list = map(list(@1, @2, @3, @4, nil), f);
+    Transform supermap = [[map flip] curry](f);
+    
+    self.list = supermap(list(@1, @2, @3, @4, nil));
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                            target:self
                                                                                            action:@selector(calculateSum)];
@@ -53,13 +56,20 @@
     return cell;
 }
 
+
 - (void)calculateSum {
-    NSNumber *sum = fold(self.list, @0, ^(NSNumber *acc, NSNumber *item) {
+    NSNumber *second = [head $ tail](self.list);
+    if (second) {
+        self.title = [NSString stringWithFormat:@"2nd val.: %@", second];
+    }
+    NSNumber *sum = fold(self.list, nil, ^(NSNumber *acc, NSNumber *item) {
         return @(acc.unsignedIntValue + item.unsignedIntValue);
     });
     if (sum) {
-        self.title = [NSString stringWithFormat:@"Sum: %@", sum];
+        // self.title = [NSString stringWithFormat:@"Sum: %@", sum];
     }
 }
+
+#undef $
 
 @end

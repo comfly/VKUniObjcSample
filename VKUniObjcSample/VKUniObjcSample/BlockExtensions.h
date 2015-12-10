@@ -9,7 +9,12 @@
 
 @interface BlockExtensions : NSObject
 
+#define $ compose:(Transform)
+
 - (Transform)compose:(Transform)block;
 - (NSArray *)mapOver:(id<NSFastEnumeration>)items;
+
+@property (nonatomic, readonly) Transform curry;
+@property (nonatomic, readonly) TwoAryFunction flip;
 
 @end

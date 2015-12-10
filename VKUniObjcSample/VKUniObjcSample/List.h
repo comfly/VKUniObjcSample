@@ -22,4 +22,6 @@ extern id fold(List, id, TwoAryFunction);
 // Returns a number of items in the list.
 extern unsigned count(List);
 // Returns a new list with items being produced by Transform function application.
-extern List map(List, Transform);
+extern List (^const map)(List, Transform);
+// Returns pair with exchanged elements: (a, b) => (b, a)
+extern Pair flip(Pair);

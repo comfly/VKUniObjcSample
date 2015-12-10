@@ -17,15 +17,8 @@ static Transform compose_impl(id self, SEL _cmd, Transform block) {
 }
 
 static NSArray *mapOver_impl(id self, SEL _cmd, id<NSFastEnumeration> items) {
-    Transform this = self;
-
     NSMutableArray *result = [NSMutableArray array];
-    for (id item in items) {
-        id transformed = this(item);
-        if (transformed) {
-            [result addObject:transformed];
-        }
-    }
+    // Implement yourself.
     return [result copy];
 }
 

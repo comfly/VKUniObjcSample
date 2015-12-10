@@ -25,3 +25,5 @@ extern unsigned count(List);
 extern List (^const map)(List, Transform);
 // Returns pair with exchanged elements: (a, b) => (b, a)
 extern Pair flip(Pair);
+
+extern NSArray *(^const toArray)(List);

@@ -34,7 +34,6 @@
     }];
 
     Transform supermap = [[map flip] curry](f);
-    
     self.list = supermap(list(@1, @2, @3, @4, nil));
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                            target:self
@@ -42,6 +41,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //TODO: When "count" is implemented replace with count.
     return 4; // count(self.list);
 }
 
@@ -56,20 +56,34 @@
     return cell;
 }
 
-
 - (void)calculateSum {
-    NSNumber *second = [head $ tail](self.list);
+    NSNumber *second = [tail $$ head](self.list);
     if (second) {
         self.title = [NSString stringWithFormat:@"2nd val.: %@", second];
     }
+
+    // TODO: Implememt "fold" and see the sum in title.
     NSNumber *sum = fold(self.list, nil, ^(NSNumber *acc, NSNumber *item) {
         return @(acc.unsignedIntValue + item.unsignedIntValue);
     });
+    
     if (sum) {
-        // self.title = [NSString stringWithFormat:@"Sum: %@", sum];
+        self.title = [NSString stringWithFormat:@"Sum: %@", sum];
+    } else {
+        NSString *(^stringify)(NSNumber *) = ^(NSNumber *n) {
+            NSUInteger num = n.unsignedIntegerValue;
+            NSString *strigified = [NSString stringWithFormat:@"%tu", num];
+            NSMutableArray *result = [NSMutableArray arrayWithCapacity:num];
+            for (__typeof(num) i = 0; i < num; ++i) {
+                [result addObject:strigified];
+            }
+            return [result componentsJoinedByString:@""];
+        };
+        
+        // TODO: See a pyramid of numbers when "mapOver:" is implemented.
+        NSLog(@"Stringified: %@", [stringify mapOver:toArray(self.list)]);
     }
 }
 
-#undef $
 
 @end

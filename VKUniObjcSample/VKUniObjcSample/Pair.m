@@ -53,26 +53,26 @@ BOOL isnull(Pair p) {
 Pair first(Pair p, Transform f) {
     NSCParameterAssert(p);
     NSCParameterAssert(f);
-    // Implement yourself.
+    //TODO: Implement yourself.
     return nil;
 }
 
 Pair second(Pair p, Transform f) {
     NSCParameterAssert(p);
     NSCParameterAssert(f);
-    // Implement yourself.
+    //TODO: Implement yourself.
     return nil;
 }
 
 id apply(Pair p, TwoAryFunction f) {
     NSCParameterAssert(p);
     NSCParameterAssert(f);
-    // Implement yourself.
+    //TODO: Implement yourself.
     return nil;
 }
 
 Pair flip(Pair p) {
     NSCParameterAssert(pair);
-    // Implement yourself.
+    //TODO: Implement yourself.
     return null();
 }

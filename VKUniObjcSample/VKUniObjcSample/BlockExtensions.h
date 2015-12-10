@@ -6,15 +6,15 @@
 #import <Foundation/Foundation.h>
 #import "CommonTypes.h"
 
+#define $ compose:(Transform)
+#define $$ revCompose:(Transform)
 
 @interface BlockExtensions : NSObject
 
-#define $ compose:(Transform)
-
 - (Transform)compose:(Transform)block;
+- (Transform)revCompose:(Transform)block;
 - (NSArray *)mapOver:(id<NSFastEnumeration>)items;
-
-@property (nonatomic, readonly) Transform curry;
-@property (nonatomic, readonly) TwoAryFunction flip;
+- (Transform)curry;
+- (TwoAryFunction)flip;
 
 @end

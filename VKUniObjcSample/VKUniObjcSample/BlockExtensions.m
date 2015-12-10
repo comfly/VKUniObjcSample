@@ -9,37 +9,43 @@
 
 @implementation BlockExtensions
 
-static Transform compose_impl(id self, SEL _cmd, Transform block) {
-    Transform this = self;
+static Transform compose_impl(Transform self, SEL _cmd, Transform block) {
     return ^(id object) {
-        return this(block(object));
+        return self(block(object));
     };
 }
 
-static NSArray *mapOver_impl(id self, SEL _cmd, id<NSFastEnumeration> items) {
+static Transform revCompose_impl(Transform self, SEL _cmd, Transform block) {
+    return ^(id object) {
+        return block(self(object));
+    };
+}
+
+static NSArray *mapOver_impl(Transform self, SEL _cmd, id<NSFastEnumeration> items) {
     NSMutableArray *result = [NSMutableArray array];
-    // Implement yourself.
+
+    //TODO: Implement yourself.
+    
     return [result copy];
 }
 
-static Transform curry_impl(id self, SEL _cmd) {
-    TwoAryFunction this = self;
+static Transform curry_impl(TwoAryFunction self, SEL _cmd) {
     return (Transform)^Transform(id a) {
         return ^id(id b) {
-            return this(a, b);
+            return self(a, b);
         };
     };
 }
 
-static TwoAryFunction flip_impl(id self, SEL _cmd) {
-    TwoAryFunction this = self;
+static TwoAryFunction flip_impl(TwoAryFunction self, SEL _cmd) {
     return ^(id a, id b) {
-        return this(b, a);
+        return self(b, a);
     };
 }
 
 
 - (Transform)compose:(Transform)block { return nil; }
+- (Transform)revCompose:(Transform)block { return nil; }
 - (NSArray *)mapOver:(id<NSFastEnumeration>)items { return nil; }
 - (Transform)curry { return nil; }
 - (TwoAryFunction)flip { return nil; }
@@ -49,6 +55,9 @@ static TwoAryFunction flip_impl(id self, SEL _cmd) {
 
     if (!class_addMethod(class, @selector(compose:), (IMP)compose_impl, "@@:@")) {
         NSLog(@"Block method \'compose:\' is not registered");
+    }
+    if (!class_addMethod(class, @selector(revCompose:), (IMP)revCompose_impl, "@@:@")) {
+        NSLog(@"Block method \'revCompose:\' is not registered");
     }
     if (!class_addMethod(class, @selector(mapOver:), (IMP)mapOver_impl, "@@:@")) {
         NSLog(@"Block method \'mapOver:\' is not registered");

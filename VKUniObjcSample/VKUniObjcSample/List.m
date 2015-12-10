@@ -62,7 +62,7 @@ id fold(List list, id seed, TwoAryFunction f) {
     NSCParameterAssert(list);
     NSCParameterAssert(f);
 
-    // Implement yourself.
+    //TODO: Implement yourself.
 
     return seed;
 }
@@ -70,7 +70,7 @@ id fold(List list, id seed, TwoAryFunction f) {
 unsigned count(List list) {
     NSCParameterAssert(list);
     
-    // Implement yourself.
+    //TODO: Implement yourself.
     
     return 0;
 }
@@ -79,7 +79,18 @@ List (^const map)(List, Transform) = ^(List list, Transform f) {
     NSCParameterAssert(list);
     NSCParameterAssert(f);
     
-    // Can you do it using flip, curry, compose?
+    //TODO: Can you do it using flip, curry, compose?
     
     return list;
+};
+
+NSArray *(^const toArray)(List) = ^(List list) {
+    NSCParameterAssert(list);
+
+    // Canonical
+    return isnull(list)
+        ? @[]
+        : [@[head(list)] arrayByAddingObjectsFromArray:toArray(tail(list))];
+    
+    //TODO: Make Efficient, remove recursion and use loops.
 };

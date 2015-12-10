@@ -16,11 +16,12 @@ static NSObject *(^UnitMarker)(void) = ^{
     return marker;
 };
 
-Pair null = nil;
+static Pair _null;
+Pair (^const null)() = ^{ return _null; };
 
 __attribute__((constructor))
 static void PairInitilizer() {
-    null = [(Pair) ^(id _1, id _2) {
+    _null = [(Pair) ^(id _1, id _2) {
         return UnitMarker();
     } copy];
 }
@@ -31,15 +32,15 @@ Pair pair(id _1, id _2) {
     } copy] autorelease];
 }
 
-id car(Pair p) {
+id (^const car)(Pair) = ^(Pair p) {
     NSCParameterAssert(p);
     return [[p(^(id f, id _) { return f; }) retain] autorelease];
-}
+};
 
-id cdr(Pair p) {
+id (^const cdr)(Pair p) = ^(Pair p) {
     NSCParameterAssert(p);
     return [[p(^(id _, id s) { return s; }) retain] autorelease];
-}
+};
 
 static TwoAryFunction Stub = ^id(id _1, id _2) { return nil; };
 BOOL isnull(Pair p) {

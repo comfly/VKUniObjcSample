@@ -9,8 +9,8 @@
 typedef id (^Pair)(TwoAryFunction);
 
 extern Pair pair(id, id);
-extern id car(Pair);
-extern id cdr(Pair);
+extern id(^const car)(Pair);
+extern id(^const cdr)(Pair);
 
 // Constructs a new pair with CAR modified with Transform function, and old CDR.
 extern Pair first(Pair, Transform);
@@ -20,5 +20,5 @@ extern Pair second(Pair, Transform);
 // Applies Pair to a 2-ary function, CAR is applied as the first arg, CDR - as the second.
 extern id apply(Pair, TwoAryFunction);
 
-extern Pair null;
+extern Pair (^const null)();
 extern BOOL isnull(Pair p);

@@ -10,7 +10,7 @@ static NSArray *extractArguments(id first, va_list list) {
         return @[ ];
     }
 
-    NSMutableArray *items = [@[ first ] mutableCopy];
+    NSMutableArray *items = [@[first] mutableCopy];
     id next;
     while ((next = va_arg(list, id))) {
         [items addObject:next];
@@ -20,7 +20,7 @@ static NSArray *extractArguments(id first, va_list list) {
 
 List list(id f, ...) {
     if (!f) {
-        return null;
+        return null();
     }
 
     va_list args;
@@ -28,7 +28,7 @@ List list(id f, ...) {
     NSArray *arguments = extractArguments(f, args).reverseObjectEnumerator.allObjects;
     va_end(args);
 
-    Pair result = null;
+    Pair result = null();
     for (id item in arguments) {
         result = pair(item, result);
     }
@@ -36,15 +36,15 @@ List list(id f, ...) {
     return result;
 }
 
-id head(List list) {
-    NSCParameterAssert(list);
-    return car(list);
-}
+id (^head)(List) = ^(List list) {
+    head = car;
+    return head(list);
+};
 
-List tail(List list) {
-    NSCParameterAssert(list);
-    return cdr(list);
-}
+List (^tail)(List) = ^(List list) {
+    tail = (List (^)(List)) cdr;
+    return tail(list);
+};
 
 id nth(List list, unsigned n) {
     NSCParameterAssert(list);
@@ -75,8 +75,5 @@ List map(List list, Transform f) {
     NSCParameterAssert(list);
     NSCParameterAssert(f);
     // Implement yourself.
-
-    return isnull(list)
-            ? list
-            : pair(f(head(list)), map(tail(list), f));
+    return null();
 }

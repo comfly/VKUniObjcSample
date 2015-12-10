@@ -11,8 +11,10 @@
 typedef Pair List;
 
 extern List list(id f, ...) NS_REQUIRES_NIL_TERMINATION;
-extern id head(List);
-extern List tail(List);
+
+extern id (^head)(List);
+extern List (^tail)(List);
+
 extern id nth(List, unsigned);
 
 // Implements foldLeft/reduce function over the list with seed and aggregating function.

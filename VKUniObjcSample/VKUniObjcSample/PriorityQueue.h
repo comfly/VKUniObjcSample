@@ -14,6 +14,8 @@
 
 @end
 
+// TODO: Extend priority queue: make it mutable, make the comparison more flexible that with protocol.
+
 @interface PriorityQueue<__covariant ObjectType: __kindof id<PriorityComparable>> : NSObject
 
 @property (nonatomic, readonly) NSUInteger count;

@@ -6,6 +6,9 @@
 #import <Foundation/Foundation.h>
 #import "CommonTypes.h"
 
+// TODO: change all the functions to blocks, like 'car' and 'cdr'.
+// This will allow you to use block extensions with them.
+
 typedef id (^Pair)(TwoAryFunction);
 
 extern Pair pair(id, id);

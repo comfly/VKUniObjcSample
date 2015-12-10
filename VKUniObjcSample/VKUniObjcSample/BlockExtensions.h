@@ -9,7 +9,7 @@
 #define $ compose:(Transform)
 #define $$ revCompose:(Transform)
 
-@interface BlockExtensions : NSObject
+@protocol BlockExtensions <NSObject>
 
 - (Transform)compose:(Transform)block;
 - (Transform)revCompose:(Transform)block;

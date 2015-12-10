@@ -16,7 +16,6 @@ namespace ObjCPPSamples {
         std::ostringstream stream("");
         
         stream << "PersonCPP: " << name << ", " << StringifyDate(DOB).UTF8String << ", ";
-        
         if (children.count > 0) {
             stream << "Children: {" << std::endl;
             for (PersonObjc *child in children) {
@@ -37,6 +36,8 @@ namespace ObjCPPSamples {
     }
     
     PersonCpp::~PersonCpp() {
+#if CHECK_MEMORY
         NSLog(@"PersonCpp \"%@\" destroyed", name);
+#endif
     }
 }

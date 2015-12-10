@@ -65,7 +65,8 @@
     self.organization = [OrganizationObjc organizationWithName:"VK University"
                                                        estDate:date
                                                      employees:{ [self samplePersonObjc] }
-                                                        owners:[self simpleOwners]]; // [self wrappedOwners];
+                                                        // TODO: Fix the leak with Wrapper class (see below)
+                                                        owners:[self simpleOwners]];
 }
 
 - (IBAction)printDataTapped {
@@ -76,10 +77,9 @@
     return @[ [NSValue valueWithPointer:[self samplePersonCpp]] ];
 }
 
-- (NSArray<Wrapper *> *)wrappedOwners {
-    return @[ [Wrapper wrap:[self samplePersonCpp] destructor:^(const void *object) {
-        delete static_cast<ObjCPPSamples::PersonCpp *>(const_cast<void *>(object));
-    }] ];
-}
+// TODO: Using this, fix the leak.
+//- (NSArray<Wrapper *>)wrappedOwners {
+//    return @[ [Wrapper ... ]];
+//}
 
 @end

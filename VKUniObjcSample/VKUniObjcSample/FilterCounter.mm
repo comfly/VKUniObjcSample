@@ -32,7 +32,7 @@
 
 - (void)generate {
     for (auto i = 0; i < self.numbersCount; ++i) {
-        // FIXME
+        // TODO: Fix the numbers adding.
         self.numbers.push_back(arc4random_uniform(1000));
     }
 //    NSLog(@"Size of numbers: %zd", self.numbers.size());

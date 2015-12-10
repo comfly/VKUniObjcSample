@@ -93,7 +93,7 @@
     return [[self valueForKeyPath:firstPart] valueForKeyPath:@"@avg.self"];
 }
 
-// Implementation that does not use other built-ins.
+// EXAMPLE: Implementation that does not use other built-ins.
 /*
 - (id)_unionOfArraysAvgForKeyPath:(NSString *)keyPath {
     NSArray *arraysOfArrays = [self valueForKeyPath:keyPath];
@@ -124,6 +124,8 @@
 */
 
 - (id)_longestUpcasedForKeyPath:(NSString *)keyPath {
+    // TODO: Implement this as a Sample above marked with EXAMPLE.
+    // Also, implement this using not a string expression, but Expression subclasses: build the AST yourself.
     NSExpression *expression = [NSExpression expressionWithFormat:@"uppercase(SUBQUERY(%K, $x, $x.length == max(%K.length))[last])", keyPath, keyPath];
     return [expression expressionValueWithObject:self context:NULL];
 }

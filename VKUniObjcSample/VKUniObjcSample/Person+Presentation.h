@@ -8,6 +8,6 @@
 
 @interface Person (Presentation)
 
-@property (nonatomic, readonly) NSString *salaryString;
+@property (nonatomic, readonly, copy) NSString *salaryString;
 
 @end

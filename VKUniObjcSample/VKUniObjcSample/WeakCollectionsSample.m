@@ -12,6 +12,9 @@
 #import "Person+Presentation.h"
 
 
+// TODO: Try implementing LRU-cache using weak collections: NSHashTable, NSMapTable, or NSPointerArray.
+// Then change the implementation to NSCache.
+
 @interface WeakCollectionsSample ()
 
 @property (nonatomic, readonly) NSPointerArray *items;

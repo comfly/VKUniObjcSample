@@ -21,7 +21,6 @@
     return [SampleDescriptor descriptorWithTitle:@"Blocks sample" storyboardID:NSStringFromClass(self)];
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -33,11 +32,13 @@
         return @(n.unsignedIntValue * 10);
     }];
 
-    Transform supermap = [[map flip] curry](f);
-    self.list = supermap(list(@1, @2, @3, @4, nil));
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                                                           target:self
-                                                                                           action:@selector(calculateSum)];
+    Transform linesAndNumbers = [[map flip] curry](f);
+    self.list = linesAndNumbers(list(@1, @2, @3, @4, nil));
+    self.navigationItem.rightBarButtonItem = [self sumButton];
+}
+
+- (UIBarButtonItem *)sumButton {
+    return [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(calculateSum)];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -48,11 +49,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BlockSampleCellID" forIndexPath:indexPath];
     NSNumber *item = nth(self.list, (unsigned int) indexPath.row);
-    if (item) {
-        cell.textLabel.text = item.description;
-    } else {
-        cell.textLabel.text = @"<NULL>";
-    }
+    cell.textLabel.text = item.description ?: @"<NULL>";
     return cell;
 }
 
@@ -62,7 +59,7 @@
         self.title = [NSString stringWithFormat:@"2nd val.: %@", second];
     }
 
-    // TODO: Implememt "fold" and see the sum in title.
+    // TODO: Implememt 'fold' and see the sum in title.
     NSNumber *sum = fold(self.list, nil, ^(NSNumber *acc, NSNumber *item) {
         return @(acc.unsignedIntValue + item.unsignedIntValue);
     });

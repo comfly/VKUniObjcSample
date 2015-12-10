@@ -20,7 +20,7 @@ static NSArray *extractArguments(id first, va_list list) {
     return items;
 }
 
-List list(id f, ...) {
+List list(id f, ...) __attribute__((overloadable)) {
     if (!f) {
         return null();
     }
@@ -38,6 +38,12 @@ List list(id f, ...) {
     return result;
 }
 
+List list(NSArray *items) __attribute__((overloadable)) {
+    NSCParameterAssert(items);
+    // TODO: Implement yourself.
+    return null();
+}
+
 id (^head)(List) = ^(List list) {
     head = car;
     return head(list);
@@ -51,6 +57,8 @@ List (^tail)(List) = ^(List list) {
 id nth(List list, unsigned n) {
     NSCParameterAssert(list);
 
+    // TODO: Can you implement it recursively?
+    
     while (n --> 0 && list && !isnull(list)) {
         list = tail(list);
     }

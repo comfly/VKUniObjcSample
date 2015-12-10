@@ -8,9 +8,12 @@
 #import "Pair.h"
 
 
+// TODO: Change all definitions from functions to blocks to be able to use Blocks Extensions.
+
 typedef Pair List;
 
-extern List list(id f, ...) NS_REQUIRES_NIL_TERMINATION;
+extern List list(id f, ...) __attribute__((overloadable)) NS_REQUIRES_NIL_TERMINATION;
+extern List list(NSArray *items) __attribute__((overloadable));
 
 extern id (^head)(List);
 extern List (^tail)(List);

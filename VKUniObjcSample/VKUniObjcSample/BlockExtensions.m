@@ -7,7 +7,16 @@
 #import <objc/runtime.h>
 
 
-@implementation BlockExtensions
+@interface _BlockExtensions : NSObject
+
+@end
+
+@implementation _BlockExtensions
+
+// TODO: Think about how can we be sure that 'self' in functions below are really of the types that are stated:
+// Transform, TwoAryFunction. Actually, at the moment any block can call 'map', 'curry' etc.
+// We should be guaranteed that only the proper ones can call the methods:
+// test it at runtime and throw if the condition is unsatisfied.
 
 static Transform compose_impl(Transform self, SEL _cmd, Transform block) {
     return ^(id object) {
@@ -43,12 +52,6 @@ static TwoAryFunction flip_impl(TwoAryFunction self, SEL _cmd) {
     };
 }
 
-
-- (Transform)compose:(Transform)block { return nil; }
-- (Transform)revCompose:(Transform)block { return nil; }
-- (NSArray *)mapOver:(id<NSFastEnumeration>)items { return nil; }
-- (Transform)curry { return nil; }
-- (TwoAryFunction)flip { return nil; }
 
 + (void)load {
     Class class = NSClassFromString(@"NSBlock");

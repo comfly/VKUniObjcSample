@@ -136,13 +136,13 @@
 			isa = PBXGroup;
 			children = (
 				F1271F1A1C185024009423EA /* Samples */,
-				F1271F141C184C3B009423EA /* ObjCCollectionsViewController.h */,
-				F1271F151C184C3B009423EA /* ObjCCollectionsViewController.m */,
-				F1271F171C184D5B009423EA /* ObjCCollectionsDataSource.h */,
-				F1271F181C184D5B009423EA /* ObjCCollectionsDataSource.m */,
-				F1271F1B1C18504C009423EA /* GenericCollectionsDataSource.h */,
 				F1271F1F1C18551A009423EA /* CollectionsSampleItem.h */,
 				F1271F201C18551A009423EA /* CollectionsSampleItem.m */,
+				F1271F1B1C18504C009423EA /* GenericCollectionsDataSource.h */,
+				F1271F171C184D5B009423EA /* ObjCCollectionsDataSource.h */,
+				F1271F181C184D5B009423EA /* ObjCCollectionsDataSource.m */,
+				F1271F141C184C3B009423EA /* ObjCCollectionsViewController.h */,
+				F1271F151C184C3B009423EA /* ObjCCollectionsViewController.m */,
 			);
 			name = "Collections Samples";
 			sourceTree = "<group>";

@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3F02A81E265A9CA808DBA2 /* Pair.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3F0DF2C675CDBC99B6DB49 /* Pair.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF3F02E7DBB405433F053DC4 /* BlockExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3F0690752ADF0077A36502 /* BlockExtensions.m */; };
 		AF3F051DD84680255235D283 /* Person+Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3F0D35AA25DFEBCE53F613 /* Person+Presentation.m */; };
 		AF3F077D2DD4D6A66CC9A686 /* Person+PriorityComparable.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3F07F57A1D168158FFEC60 /* Person+PriorityComparable.m */; };
+		AF3F0A77DFFDABF4635EE2BA /* BlockSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3F02FC9410C965F6AF3A8E /* BlockSampleViewController.m */; };
+		AF3F0C9B1B33E67981A482DB /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3F0CEDC2DA6BE8D7B82D47 /* List.m */; };
 		F1271F161C184C3B009423EA /* ObjCCollectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F151C184C3B009423EA /* ObjCCollectionsViewController.m */; };
 		F1271F191C184D5B009423EA /* ObjCCollectionsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F181C184D5B009423EA /* ObjCCollectionsDataSource.m */; };
 		F1271F1E1C185148009423EA /* CollectionOperationsSample.m in Sources */ = {isa = PBXBuildFile; fileRef = F1271F1D1C185148009423EA /* CollectionOperationsSample.m */; };
@@ -36,9 +40,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF3F02FC9410C965F6AF3A8E /* BlockSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockSampleViewController.m; sourceTree = "<group>"; };
+		AF3F0690752ADF0077A36502 /* BlockExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockExtensions.m; sourceTree = "<group>"; };
 		AF3F078E31CC63EA42841445 /* Person+PriorityComparable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+PriorityComparable.h"; sourceTree = "<group>"; };
+		AF3F07E3CCE28CDC749E2C36 /* BlockExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockExtensions.h; sourceTree = "<group>"; };
 		AF3F07F57A1D168158FFEC60 /* Person+PriorityComparable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+PriorityComparable.m"; sourceTree = "<group>"; };
+		AF3F0AFA947A6BA164DA01AF /* Pair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pair.h; sourceTree = "<group>"; };
+		AF3F0BDC92CC74936F164FA6 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		AF3F0CEDC2DA6BE8D7B82D47 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		AF3F0D35AA25DFEBCE53F613 /* Person+Presentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Person+Presentation.m"; sourceTree = "<group>"; };
+		AF3F0DE68B20FAB104FF4737 /* BlockSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockSampleViewController.h; sourceTree = "<group>"; };
+		AF3F0DF2C675CDBC99B6DB49 /* Pair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pair.m; sourceTree = "<group>"; };
 		AF3F0E410D92B8DF7426ED30 /* Person+Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Person+Presentation.h"; sourceTree = "<group>"; };
 		F1271F141C184C3B009423EA /* ObjCCollectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCCollectionsViewController.h; sourceTree = "<group>"; };
 		F1271F151C184C3B009423EA /* ObjCCollectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCCollectionsViewController.m; sourceTree = "<group>"; };
@@ -57,6 +69,7 @@
 		F1271F361C189FCB009423EA /* CFCollectionsSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFCollectionsSample.m; sourceTree = "<group>"; };
 		F1271F381C18AA22009423EA /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
 		F1271F391C18AA22009423EA /* PriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriorityQueue.m; sourceTree = "<group>"; };
+		F1271F3C1C19C26F009423EA /* CommonTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonTypes.h; sourceTree = "<group>"; };
 		F1B176D41C170DF700022523 /* VKUniObjcSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKUniObjcSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B176D81C170DF700022523 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1B176DA1C170DF700022523 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,6 +117,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF3F025D7A15EDB8E67F5035 /* Blocks Samples */ = {
+			isa = PBXGroup;
+			children = (
+				F1271F3B1C19B1D4009423EA /* Controller */,
+				AF3F07E3CCE28CDC749E2C36 /* BlockExtensions.h */,
+				AF3F0690752ADF0077A36502 /* BlockExtensions.m */,
+				AF3F0BDC92CC74936F164FA6 /* List.h */,
+				AF3F0CEDC2DA6BE8D7B82D47 /* List.m */,
+				AF3F0AFA947A6BA164DA01AF /* Pair.h */,
+				AF3F0DF2C675CDBC99B6DB49 /* Pair.m */,
+				F1271F3C1C19C26F009423EA /* CommonTypes.h */,
+			);
+			name = "Blocks Samples";
+			sourceTree = "<group>";
+		};
 		F1271F131C184BF8009423EA /* Collections Samples */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +166,15 @@
 				AF3F0E410D92B8DF7426ED30 /* Person+Presentation.h */,
 			);
 			name = Samples;
+			sourceTree = "<group>";
+		};
+		F1271F3B1C19B1D4009423EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF3F0DE68B20FAB104FF4737 /* BlockSampleViewController.h */,
+				AF3F02FC9410C965F6AF3A8E /* BlockSampleViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		F1B176CB1C170DF700022523 = {
@@ -184,6 +221,7 @@
 			children = (
 				F1B176EF1C170E8700022523 /* ObjC++ Samples */,
 				F1271F131C184BF8009423EA /* Collections Samples */,
+				AF3F025D7A15EDB8E67F5035 /* Blocks Samples */,
 				F1B176FA1C17109600022523 /* SampleController.h */,
 				F1B176FB1C1711B800022523 /* SampleViewControllers.h */,
 				F1B176F01C170EB100022523 /* SamplesSelectionViewController.h */,
@@ -338,6 +376,10 @@
 				F1B176F21C170EB100022523 /* SamplesSelectionViewController.m in Sources */,
 				AF3F077D2DD4D6A66CC9A686 /* Person+PriorityComparable.m in Sources */,
 				AF3F051DD84680255235D283 /* Person+Presentation.m in Sources */,
+				AF3F02E7DBB405433F053DC4 /* BlockExtensions.m in Sources */,
+				AF3F02A81E265A9CA808DBA2 /* Pair.m in Sources */,
+				AF3F0C9B1B33E67981A482DB /* List.m in Sources */,
+				AF3F0A77DFFDABF4635EE2BA /* BlockSampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

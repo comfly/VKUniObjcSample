@@ -11,6 +11,7 @@
 #import "SampleViewControllers.h"
 #import "ObjCCollectionsViewController.h"
 #import "VKUniObjcSample-Swift.h"
+#import "BlockSampleViewController.h"
 
 
 @interface SamplesSelectionViewController ()
@@ -28,6 +29,7 @@
         [ObjCPPSamplesViewController descriptor],
         [PIMPLSampleViewController descriptor],
         [ObjCCollectionsViewController descriptor],
+        [BlockSampleViewController descriptor],
     ];
 }
 
@@ -36,7 +38,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    id<SampleDescriptor> descriptor = self.samples[indexPath.row];
+    id<SampleDescriptor> descriptor = self.samples[(NSUInteger) indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SampleCellID" forIndexPath:indexPath];
     cell.textLabel.text = descriptor.title;
     return cell;
@@ -44,7 +46,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:self.samples[indexPath.row].storyboardID];
+    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:self.samples[(NSUInteger) indexPath.row].storyboardID];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

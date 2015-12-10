@@ -14,7 +14,6 @@
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSUInteger salary;
 @property (nonatomic, readonly) NSArray<NSNumber *> *lastIncomes;
-@property (nonatomic, readonly) NSDictionary<NSString *, NSNumber *> *maxValueOfLastIncomes;
 
 + (instancetype)personWithName:(NSString *)name salary:(NSUInteger)salary;
 
@@ -25,3 +24,10 @@
 @end
 
 extern NSArray<NSString *> *GenerateNames();
+
+
+@interface Person (DictionaryKVCSample)
+
+@property (nonatomic, readonly) NSDictionary<NSString *, NSNumber *> *maxValueOfLastIncomes;
+
+@end

@@ -93,6 +93,36 @@
     return [[self valueForKeyPath:firstPart] valueForKeyPath:@"@avg.self"];
 }
 
+// Implementation that does not use other built-ins.
+/*
+- (id)_unionOfArraysAvgForKeyPath:(NSString *)keyPath {
+    NSArray *arraysOfArrays = [self valueForKeyPath:keyPath];
+    if (![arraysOfArrays isKindOfClass:[NSArray class]]) {
+        return nil;
+    }
+
+    NSMutableArray *numbers = [NSMutableArray array];
+    for (id possibleArray in arraysOfArrays) {
+        if ([possibleArray isKindOfClass:[NSArray class]]) {
+            [numbers addObjectsFromArray:possibleArray];
+        } else {
+            [numbers addObject:possibleArray];
+        }
+    }
+
+    if (numbers.count == 0) {
+        return nil;
+    }
+
+    double sum = 0;
+    for (NSNumber *number in numbers) {
+        sum += number.doubleValue;
+    }
+
+    return @(sum / numbers.count);
+}
+*/
+
 - (id)_longestUpcasedForKeyPath:(NSString *)keyPath {
     NSExpression *expression = [NSExpression expressionWithFormat:@"uppercase(SUBQUERY(%K, $x, $x.length == max(%K.length))[last])", keyPath, keyPath];
     return [expression expressionValueWithObject:self context:NULL];

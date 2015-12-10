@@ -22,10 +22,17 @@
         result->_name = [name copy];
         result->_salary = salary;
         result->_lastIncomes = [lastIncomes copy];
-        result->_maxValueOfLastIncomes = lastIncomes ? @{ @"max_income_value" : [lastIncomes valueForKeyPath:@"@max.self"] } : @{ };
     }
     
     return result;
+}
+
+@end
+
+@implementation Person (DictionaryKVCSample)
+
+- (NSDictionary<NSString *, NSNumber *> *)maxValueOfLastIncomes {
+    return self.lastIncomes ? @{ @"max_income_value" : [self.lastIncomes valueForKeyPath:@"@max.self"] } : @{ };
 }
 
 @end
